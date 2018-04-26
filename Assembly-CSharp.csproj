@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonClick.cs" />
+     <Compile Include="Assets\Scripts\ButtonClickAnimation.cs" />
      <Compile Include="Assets\Scripts\ButtonClickFInalScene.cs" />
      <Compile Include="Assets\Scripts\ButtonCutScreen.cs" />
      <Compile Include="Assets\Scripts\ChangeFeedbackText.cs" />

@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 269.5, y: -114.1}
+  m_AnchoredPosition: {x: 273, y: -111}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &547823727
@@ -429,7 +429,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'EVIL '
+  m_Text: INFERIOR
 --- !u!222 &1004511193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -506,15 +506,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedAllTargets: 1
-  targetObjPrefab: {fileID: 1805872806331444, guid: bf3b49456257846d1954a8e57eb50ff7,
+  targetObjPrefab: {fileID: 1695351281803900, guid: 285677697348548b0b08f5a6f4dc5631,
     type: 2}
-  targetTag1: evil
+  targetTag1: inferior
   targetTag2: null
   tileWidth: 2.2
   tileHeight: 2.2
   levelFile: level1.txt
   buttons:
-  - {fileID: 1035996060165830, guid: 63755ed8f17e449749372b29d93157de, type: 2}
+  - {fileID: 1286625532217954, guid: e65ee10e07eb94b65b08e583ab9b4278, type: 2}
+  - {fileID: 1982451593735756, guid: 6ad5c9915ede3495bbe0b37a3f24223a, type: 2}
 --- !u!4 &1360625112
 Transform:
   m_ObjectHideFlags: 0
@@ -554,6 +555,7 @@ GameObject:
   - component: {fileID: 1399770970}
   - component: {fileID: 1399770972}
   - component: {fileID: 1399770969}
+  - component: {fileID: 1399770973}
   m_Layer: 5
   m_Name: SubmitButton
   m_TagString: Untagged
@@ -601,7 +603,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 0.49264705, b: 0.49264705, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -679,6 +681,23 @@ MonoBehaviour:
   submitted: 0
   retryImage: {fileID: 21300000, guid: da112e0a2552d4463966454279dc8fa8, type: 3}
   continueImage: {fileID: 21300000, guid: e853de116e5fa40fc8416394839cf100, type: 3}
+  retryPushed: {fileID: 21300000, guid: b105cd5c375704d088a141978d297db5, type: 3}
+  continuePushed: {fileID: 21300000, guid: 0f522bcb597254207a700c5174cc8a47, type: 3}
+  submitPushed: {fileID: 21300000, guid: 82a66a0bfd6d1476ca6e30ee9f0dd1d9, type: 3}
+--- !u!114 &1399770973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1399770967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808ce25dd0f9141f087874474627739d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  retryPushed: {fileID: 21300000, guid: b105cd5c375704d088a141978d297db5, type: 3}
+  continuePushed: {fileID: 21300000, guid: 0f522bcb597254207a700c5174cc8a47, type: 3}
+  submitPushed: {fileID: 21300000, guid: 82a66a0bfd6d1476ca6e30ee9f0dd1d9, type: 3}
 --- !u!1 &1431733978
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +881,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.13192041, g: 0.24005194, b: 0.29411763, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -936,7 +955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 274.5, y: -87}
+  m_AnchoredPosition: {x: 271, y: -87}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1887295553
@@ -951,7 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -971,7 +990,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Select the object that is '
+  m_Text: Select the object described as
 --- !u!222 &1887295554
 CanvasRenderer:
   m_ObjectHideFlags: 0

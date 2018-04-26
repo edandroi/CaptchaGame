@@ -80,8 +80,21 @@ public class GameManager : MonoBehaviour {
 
 			//WE ONLY LOOK FOR ONE MATCHING TAG
 			if (questionTag == "single") {
+
+
+				//If the objects have only one tag
 				if (targetTag2 == "null") {
 					if (buttonTag1 == targetTag1) {
+						if (buttonIsSelected == true) {
+							// We found a button that's a duck that we didn't select, therefore we have not selected all ducks
+							selectedAllTargets = true;
+						} else {
+							selectedAllTargets = false;
+							return;
+						}
+					}
+
+					if (buttonTag2 == targetTag1) {
 						if (buttonIsSelected == true) {
 							// We found a button that's a duck that we didn't select, therefore we have not selected all ducks
 							selectedAllTargets = true;
@@ -101,11 +114,66 @@ public class GameManager : MonoBehaviour {
 						}
 					}
 				}
-		
 
+
+//
+//				//if the objects have two tags
+//				if (targetTag2 != null) {
+//						if (buttonTag1 == targetTag1 && buttonTag2 != targetTag2) {
+//							if (buttonIsSelected == true) {
+//								// We found a button that's a duck that we didn't select, therefore we have not selected all ducks
+//								selectedAllTargets = true;
+//							} else {
+//								selectedAllTargets = false;
+//								return;
+//							}
+//						}
+//						if (buttonTag2 == targetTag1 && buttonTag1 != targetTag2) {
+//							if (buttonIsSelected == true) {
+//								// We found a button that's a duck that we didn't select, therefore we have not selected all ducks
+//								selectedAllTargets = true;
+//							} else {
+//								selectedAllTargets = false;
+//								return;
+//							}
+//							
+//						}
+//					if (buttonTag2 == targetTag1 && buttonTag1 == targetTag2) {
+//						if (buttonIsSelected == true) {
+//							// We found a button that's a duck that we didn't select, therefore we have not selected all ducks
+//							selectedAllTargets = true;
+//						} else {
+//							selectedAllTargets = false;
+//							return;
+//						}
+//
+//					}
+//					if (buttonTag1 == targetTag1 && buttonTag2 == targetTag2) {
+//						if (buttonIsSelected == true) {
+//							// We found a button that's a duck that we didn't select, therefore we have not selected all ducks
+//							selectedAllTargets = true;
+//						} else {
+//							selectedAllTargets = false;
+//							return;
+//						}
+//
+//					}
+//						if (buttonTag2 != targetTag1 && buttonTag1 != targetTag2) {
+//							if (buttonIsSelected == false) {
+//								// We found a button that's a duck that we didn't select, therefore we have not selected all ducks
+//								selectedAllTargets = true;
+//							} else {
+//								selectedAllTargets = false;
+//								return;
+//							}
+//
+//						}		
+//				} 
+			}
 
 				//WE LOOK FOR TWO MATCHING TAGS
-			} else if (questionTag == "and") {
+
+			else if (questionTag == "and") {
 				if (buttonTag1 == targetTag1 && buttonTag2 == targetTag2) {
 					if (buttonIsSelected == true) {
 						selectedAllTargets = true;

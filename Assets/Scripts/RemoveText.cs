@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class RemoveText : MonoBehaviour {
 
-	GameObject gameManager;
 	ButtonClick submitted;
 
 	// Use this for initialization
 	void Start () {
-		gameManager = GameObject.Find ("GameManager");
 		submitted = GameObject.Find ("SubmitButton").GetComponent<ButtonClick> ();
 	}
 	
